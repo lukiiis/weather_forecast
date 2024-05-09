@@ -4,11 +4,9 @@ import com.weather.backend.api.WeatherApiData;
 import com.weather.backend.dto.WeatherDTO;
 import com.weather.backend.mapper.WeatherMapper;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
