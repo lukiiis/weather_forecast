@@ -18,7 +18,7 @@ public class WeatherController {
 
     private final WeatherService weatherService;
 
-    @GetMapping("/weather-7")
+    @GetMapping("/weather-forecast")
     public ResponseEntity<List<WeatherDTO>> getWeeklyWeather(@RequestParam Double latitude, @RequestParam Double longitude){
         return ResponseEntity.ok(weatherService.getWeeklyWeather(latitude, longitude));
     }

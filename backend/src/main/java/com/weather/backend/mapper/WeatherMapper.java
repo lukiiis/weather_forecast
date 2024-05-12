@@ -30,8 +30,7 @@ public class WeatherMapper {
         weatherDTO.setWeatherCode(weatherApiData.getDaily().getWeather_code().get(index));
         weatherDTO.setMinTemp(weatherApiData.getDaily().getTemperature_2m_min().get(index));
         weatherDTO.setMaxTemp(weatherApiData.getDaily().getTemperature_2m_max().get(index));
-        //todo round to 2 decimal places
-        weatherDTO.setEnergy(weatherApiData.getDaily().getSunshine_duration().get(index) / 60 * 2.5 * 0.2);
+        weatherDTO.setEnergy((double)Math.round(weatherApiData.getDaily().getSunshine_duration().get(index) / 60 * 2.5 * 0.2 * 100) / 100);
         return weatherDTO;
     }
 }
