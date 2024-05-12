@@ -1,5 +1,5 @@
 import { Marker, useMapEvents } from "react-leaflet";
-import { LocationProps } from "../hooks/weatherApi";
+import { LocationProps } from "../functions/weatherApi";
 import { useState } from "react";
 import { LatLng } from "leaflet";
 import { Icon } from "leaflet";

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { WeatherForecast, fetchWeatherData, initiateMap } from './hooks/weatherApi';
+import { WeatherForecast, fetchWeatherData, initiateMap } from './functions/weatherApi';
 import './App.css';
 import WeatherCard from './components/WeatherCard';
 import 'leaflet/dist/leaflet.css';
@@ -23,11 +23,11 @@ const App = () => {
             });
           },
           error => {
-            console.error("Błąd pobierania lokalizacji:", error);
+            console.error("Error fetching data:", error);
           }
         );
       } else {
-        console.error("Twoja przeglądarka nie obsługuje geolokalizacji.");
+        console.error("Your browser does not support geolocalization.");
       }
     };
     getLocation();
@@ -51,6 +51,7 @@ const App = () => {
     setDark(!dark);
     document.body.classList.toggle("dark");
   }
+
 
   return (
     <div className="h-full w-full mode-transition dark:bg-black">

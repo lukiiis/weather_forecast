@@ -14,8 +14,8 @@ export const fetchWeatherData = async (params: { latitude: number; longitude: nu
         const response: AxiosResponse<WeatherForecast[]> = await axios.get('http://localhost:8081/api/v1/weather-forecast', { params });
         return response.data;
       } catch (error) {
-        console.error('Wystąpił błąd podczas pobierania danych pogodowych:', error);
-        throw new Error('Wystąpił błąd podczas pobierania danych pogodowych');
+        console.error('Error fetching data:', error);
+        throw new Error('Error fetching data');
       }
 }
 
