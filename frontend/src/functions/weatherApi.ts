@@ -11,7 +11,7 @@ export interface WeatherForecast {
 
 export const fetchWeatherData = async (params: { latitude: number; longitude: number }): Promise<WeatherForecast[]> => {
     try {
-        const response: AxiosResponse<WeatherForecast[]> = await axios.get('http://localhost:8081/api/v1/weather-forecast', { params });
+        const response: AxiosResponse<WeatherForecast[]> = await axios.get('https://weather-forecast-mkjb.onrender.com/api/v1/weather-forecast', { params });
         return response.data;
       } catch (error) {
         console.error('Error fetching data:', error);
